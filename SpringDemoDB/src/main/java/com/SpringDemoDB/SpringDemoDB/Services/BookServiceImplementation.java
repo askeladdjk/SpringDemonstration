@@ -14,7 +14,7 @@ public class BookServiceImplementation implements BookService {
     private BookRepository bookrepository;
 
     public BookServiceImplementation (BookRepository bookRepository){
-        this.bookrepository = bookrepository;
+        this.bookrepository = bookRepository;
     }
 
     @Override

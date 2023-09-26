@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="SpringDemoDB:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/SpringDemoDB_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/SpringDemoDB/target/SpringDemoDB-0.0.1-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -25,6 +25,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.5" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.5" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.7.15" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.79" />
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.79" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.29" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.29" />
@@ -123,7 +124,6 @@
           <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy-ant:3.0.19" />
           <element id="library" level="project" name="Maven: org.apache.ant:ant:1.10.12" />
           <element id="library" level="project" name="Maven: org.apache.ant:ant-junit:1.10.12" />
-          <element id="library" level="module" name="Maven: com.sun:tools:1.8.0" module-name="SpringDemoDB" />
           <element id="library" level="project" name="Maven: org.apache.ant:ant-launcher:1.10.12" />
           <element id="library" level="project" name="Maven: org.apache.ant:ant-antlr:1.10.12" />
           <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy-astbuilder:3.0.19" />
@@ -167,6 +167,9 @@
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-messaging:5.2.2.RELEASE" />
         </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/SpringDemoDB/target/SpringDemoDB-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="SpringDemoDB/web/Web" />
     </root>

@@ -6,15 +6,11 @@ import com.SpringDemoDB.SpringDemoDB.Services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.GeneratedValue;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/books")
 public class BookController {
-
-    private List<Book> BookList = new ArrayList<>();
 
     @Autowired
     private BookRepository bookRepository;
@@ -42,12 +38,12 @@ public class BookController {
     }
 
     @PostMapping("/update/{id}")
-    public Book updateBook(@RequestBody Book updateBook,@PathVariable Long id) {
+    public Book updateBook(@PathVariable Long id) {
 
         Book exbook = bookRepository.findById(id).get();
 
         return bookService.updateBook(exbook);
-        }
+    }
 
     @GetMapping("/searchbyauthor")
     public List<Book> getAuthor (@RequestParam String author){

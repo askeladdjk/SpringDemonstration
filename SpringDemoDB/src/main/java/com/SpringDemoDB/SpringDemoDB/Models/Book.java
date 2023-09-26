@@ -3,7 +3,7 @@ package com.SpringDemoDB.SpringDemoDB.Models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "books")
+@Table(name = "book")
 public class Book {
 
     @Id
