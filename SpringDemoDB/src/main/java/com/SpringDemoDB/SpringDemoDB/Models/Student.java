@@ -22,6 +22,10 @@ public class Student {
     @Column
     private String course;
 
+//    @ManyToOne
+//    @JoinColumn
+//    private Book FK_bookId;
+
     public long getId(){
         return id;
     }
@@ -53,4 +57,13 @@ public class Student {
     public void setCourse(String course) {
         this.course = course;
     }
+
+//    public Book getFK_bookId(){
+//        return FK_bookId;
+//    }
+//
+//    public void setFK_bookId (Book FK_bookId){
+//        this.FK_bookId = FK_bookId;
+//    }
+
 }

@@ -18,6 +18,7 @@ public class Book {
     @Column
     private String author;
 
+
     public Long getId(){
         return id;
     }

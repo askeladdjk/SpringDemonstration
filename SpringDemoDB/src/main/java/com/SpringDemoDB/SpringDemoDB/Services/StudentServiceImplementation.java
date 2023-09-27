@@ -23,6 +23,11 @@ public class StudentServiceImplementation implements StudentService{
     }
 
     @Override
+    public List<Student> getStudentWithBook (String getStudentWithBook){
+        return studentRepository.getStudentWithBook(getStudentWithBook);
+    }
+
+    @Override
     public Student saveStudent(Student student){
         return studentRepository.save(student);
     }
@@ -36,4 +41,5 @@ public class StudentServiceImplementation implements StudentService{
     public Student studentservice() {
         return null;
     }
+
 }

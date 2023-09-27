@@ -35,4 +35,9 @@ public class StudentController{
         Student student = (Student) studentRepository.findById(id).get();
         return studentService.updateStudent(student);
     }
+
+    @GetMapping("/getStudentWithBook")
+    public List<Student> getStudentWithBook (@RequestParam String getStudentWithBook){
+        return studentService.getStudentWithBook(getStudentWithBook);
+    }
 }
