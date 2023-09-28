@@ -23,8 +23,8 @@ public class StudentServiceImplementation implements StudentService{
     }
 
     @Override
-    public List<Student> getStudentWithBook (String getStudentWithBook){
-        return studentRepository.getStudentWithBook(getStudentWithBook);
+    public List<Student> getStudentWithBook (String student){
+        return studentRepository.getStudentWithBook(student);
     }
 
     @Override

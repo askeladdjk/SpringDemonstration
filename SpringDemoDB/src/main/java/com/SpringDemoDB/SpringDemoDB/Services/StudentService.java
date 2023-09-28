@@ -8,7 +8,7 @@ import java.util.List;
 public interface StudentService {
 
     List<Student> getAllStudents();
-    List<Student> getStudentWithBook(String getStudentWithBook);
+    List<Student> getStudentWithBook(String student);
     Student saveStudent (Student student);
     Student updateStudent(Student student);
     Student studentservice();

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/students")
+@RequestMapping("/student")
 public class StudentController{
 
     @Autowired
@@ -37,7 +37,7 @@ public class StudentController{
     }
 
     @GetMapping("/getStudentWithBook")
-    public List<Student> getStudentWithBook (@RequestParam String getStudentWithBook){
-        return studentService.getStudentWithBook(getStudentWithBook);
+    public List<Student> getStudentWithBook (@RequestParam String student){
+        return studentService.getStudentWithBook(student);
     }
 }
