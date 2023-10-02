@@ -41,7 +41,6 @@ public class BookController {
     public Book updateBook(@PathVariable Long id) {
 
         Book exbook = bookRepository.findById(id).get();
-
         return bookService.updateBook(exbook);
     }
 

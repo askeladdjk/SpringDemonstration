@@ -1,45 +1,44 @@
 package com.SpringDemoDB.SpringDemoDB.Models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "book")
 public class Book {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
 
-    @Column
-    private Long id;
-
-    @Column
+    @Column(name = "title")
     private String title;
 
-    @Column
+    @Column(name = "author")
     private String author;
 
-
-    public Long getId(){
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id){
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title){
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public String getAuthor(){
+    public String getAuthor() {
         return author;
     }
 
-    public void setAuthor (String author){
+    public void setAuthor(String author) {
         this.author = author;
     }
 }

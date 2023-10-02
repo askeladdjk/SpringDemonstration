@@ -11,5 +11,4 @@ public interface StudentService {
     List<Student> getStudentWithBook(String student);
     Student saveStudent (Student student);
     Student updateStudent(Student student);
-    Student studentservice();
 }

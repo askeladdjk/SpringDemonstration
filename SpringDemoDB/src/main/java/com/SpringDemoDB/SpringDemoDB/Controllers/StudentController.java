@@ -32,12 +32,14 @@ public class StudentController{
     @PostMapping("/update/{id}")
     public Student updateStudent(@PathVariable long id){
 
-        Student student = (Student) studentRepository.findById(id).get();
+        Student student = studentRepository.findById(id).get();
         return studentService.updateStudent(student);
     }
 
     @GetMapping("/getStudentWithBook")
-    public List<Student> getStudentWithBook (@RequestParam String student){
-        return studentService.getStudentWithBook(student);
+    public List<Student> getStudentWithBook (String student){
+
+    return studentService.getStudentWithBook(student);
     }
+
 }

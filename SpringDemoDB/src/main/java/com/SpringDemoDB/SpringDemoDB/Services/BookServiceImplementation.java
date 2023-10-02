@@ -47,9 +47,5 @@ public class BookServiceImplementation implements BookService {
        return bookrepository.save(book);
     }
 
-    @Override
-    public BookService BOOKSERVICE() {
-            return null;
-    }
 }
 

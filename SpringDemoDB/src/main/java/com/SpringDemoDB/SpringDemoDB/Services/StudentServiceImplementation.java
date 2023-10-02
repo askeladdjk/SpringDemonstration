@@ -1,5 +1,6 @@
 package com.SpringDemoDB.SpringDemoDB.Services;
 
+import com.SpringDemoDB.SpringDemoDB.Models.Book;
 import com.SpringDemoDB.SpringDemoDB.Models.Student;
 import com.SpringDemoDB.SpringDemoDB.Repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +36,6 @@ public class StudentServiceImplementation implements StudentService{
     @Override
     public Student updateStudent(Student student){
         return studentRepository.save(student);
-    }
-
-    @Override
-    public Student studentservice() {
-        return null;
     }
 
 }
