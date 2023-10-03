@@ -22,8 +22,12 @@ public class Student {
     @Column
     private String course;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "FK_bookId")
+    @Column
+    private int FK_bookId;
+
+    @ManyToOne
+            //(fetch = FetchType.LAZY)
+    @JoinColumn(name = "FK_bookId", insertable = false, updatable = false)
     private Book book;
 
     public  Book book() {
@@ -68,5 +72,13 @@ public class Student {
 
     public Book getBook() {
         return book;
+    }
+
+    public int getFK_bookId() {
+        return FK_bookId;
+    }
+
+    public void setFK_bookId(int FK_bookId) {
+        this.FK_bookId = FK_bookId;
     }
 }

@@ -31,14 +31,14 @@ public class BookController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public List<Book> deleteBook(@PathVariable Long id) {
+    public List<Book> deleteBook(@PathVariable int id) {
 
           bookService.deleteBook(id);
           return bookService.getAllBooks();
     }
 
     @PostMapping("/update/{id}")
-    public Book updateBook(@PathVariable Long id) {
+    public Book updateBook(@PathVariable int id) {
 
         Book exbook = bookRepository.findById(id).get();
         return bookService.updateBook(exbook);

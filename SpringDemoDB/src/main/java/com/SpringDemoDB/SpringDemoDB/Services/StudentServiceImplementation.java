@@ -1,6 +1,5 @@
 package com.SpringDemoDB.SpringDemoDB.Services;
 
-import com.SpringDemoDB.SpringDemoDB.Models.Book;
 import com.SpringDemoDB.SpringDemoDB.Models.Student;
 import com.SpringDemoDB.SpringDemoDB.Repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +23,8 @@ public class StudentServiceImplementation implements StudentService{
     }
 
     @Override
-    public List<Student> getStudentWithBook (String student){
-        return studentRepository.getStudentWithBook(student);
+    public List<Student> findAllByStudent (String student){
+        return studentRepository.findAllByStudent(student);
     }
 
     @Override

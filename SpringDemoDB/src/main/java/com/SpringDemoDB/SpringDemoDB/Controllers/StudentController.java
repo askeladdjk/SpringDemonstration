@@ -1,6 +1,5 @@
 package com.SpringDemoDB.SpringDemoDB.Controllers;
 
-
 import com.SpringDemoDB.SpringDemoDB.Models.Student;
 import com.SpringDemoDB.SpringDemoDB.Repositories.StudentRepository;
 import com.SpringDemoDB.SpringDemoDB.Services.StudentService;
@@ -25,21 +24,21 @@ public class StudentController{
     }
 
     @PostMapping("/saveStudent")
-    public Student saveStudent(Student student) {
+    public Student saveStudent(@RequestBody Student student) {
         return studentService.saveStudent(student);
     }
 
     @PostMapping("/update/{id}")
-    public Student updateStudent(@PathVariable long id){
+    public Student updateStudent(@PathVariable int id){
 
         Student student = studentRepository.findById(id).get();
         return studentService.updateStudent(student);
     }
 
     @GetMapping("/getStudentWithBook")
-    public List<Student> getStudentWithBook (String student){
+    public List<Student> getStudentWithBook (@RequestParam String student){
 
-    return studentService.getStudentWithBook(student);
+    return studentService. findAllByStudent(student);
     }
 
 }

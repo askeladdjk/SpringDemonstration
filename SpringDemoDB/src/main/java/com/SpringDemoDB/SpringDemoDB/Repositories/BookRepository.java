@@ -5,7 +5,7 @@ import com.SpringDemoDB.SpringDemoDB.Models.Book;
 
 import java.util.List;
 
-public interface BookRepository extends JpaRepository<Book, Long> {
+public interface BookRepository extends JpaRepository<Book, Integer> {
 
     List<Book> findAllByAuthorContains(String author);
     List<Book> findAllByTitleContains(String title);
